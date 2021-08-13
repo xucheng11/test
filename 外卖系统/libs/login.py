@@ -21,6 +21,7 @@ class Login:
         pyaload = copy.copy(indata)
         pyaload["password"]=get_md5(indata["password"])
         res = requests.post(url,data=pyaload)
+        print(res)
         if getToken==False:
             return res.json()
         else:
