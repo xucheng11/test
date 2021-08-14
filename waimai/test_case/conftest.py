@@ -41,11 +41,11 @@ a ={
 def update_shop_init(shop_init):
     print("---正在数据初始化")
     shopid = shop_init.shop_list({"page":1,"limit":1})['data']['records'][0]['id']
-    imageInfo =shop_init.shop_file("aaa.png","../data/aaa.png")
+    imageInfo =shop_init.shop_file("aaa.png","data/aaa.png")
     yield shopid,imageInfo
     #恢复原先数据
     print("---正在操作数恢复")
-    imageInfo1 = shop_init.shop_file("bbb.png", "../data/bbb.png")
+    imageInfo1 = shop_init.shop_file("bbb.png", "data/bbb.png")
     res = shop_init.shop_update(a,shopid,imageInfo1)
 
 #食品添加前置条件

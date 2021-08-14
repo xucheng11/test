@@ -17,8 +17,8 @@ from  tools.excel_case import *
 class Testshop:
     @allure.story("商铺列表列出操作")
     @allure.title("{title}")
-    # @pytest.mark.parametrize("resBood,resData,title",get_excel("我的商铺","listshopping"))
-    @pytest.mark.parametrize("resBood,resData,title",get_yaml_case("../data/shop.yaml","listshopping"))
+    @pytest.mark.parametrize("resBood,resData,title",get_excel("我的商铺","listshopping"))
+    # @pytest.mark.parametrize("resBood,resData,title",get_yaml_case("../data/shop.yaml","listshopping"))
     def test_shop_list(self,resBood,resData,title,shop_init):
         res = shop_init.shop_list(resBood)
         if "code" in res:
