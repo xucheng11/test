@@ -10,5 +10,5 @@
 """
 import pytest,os
 if __name__ == '__main__':
-    pytest.main(["../test_case", "--alluredir", "../report/tmp", "--clean-alluredir", "-s"])
-    os.system("allure serve ../report/tmp")
+    pytest.main(["test_case", "--alluredir", "report/tmp", "--clean-alluredir", "-s"])
+    os.system("allure serve report/tmp")
