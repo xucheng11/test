@@ -12,7 +12,7 @@ import xlrd,json,pprint,yaml
 #处理excel用例封装
 def get_excel(sheetName,caseName):
     rilist= []
-    url = "../data/Delivery_System_excel-V1.5.xls"
+    url = "./data/Delivery_System_excel-V1.5.xls"
     workbook = xlrd.open_workbook(url,formatting_info=True)
     worksheet = workbook.sheet_by_name(sheetName)
     inx = 0
